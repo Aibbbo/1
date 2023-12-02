@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация студента</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/submit" method="post">
+        <label for="firstName">Имя:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Фамилия:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="inn">ИНН:</label>
+        <input type="text" id="inn" name="inn" pattern="[0-9]{12}" title="ИНН должен содержать 12 цифр" required>
+
+        <label for="class">Класс:</label>
+        <input type="text" id="class" name="class" required>
+
+        <label for="teacherName">Имя учителя:</label>
+        <input type="text" id="teacherName" name="teacherName" required>
+
+        <input type="submit" value="Отправить">
+    </form>
+
+</body>
+</html>
